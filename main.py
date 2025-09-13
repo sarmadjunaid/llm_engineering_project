@@ -15,11 +15,6 @@ else:
 
 
 if __name__ == "__main__":
-    question = """
-    Please explain what this code does and why:
-    yield from {book.get("author") for book in books if book.get("author")}
-    """
-
     system_prompt = "You are an expert tutor of python. You will guide us through the questions and explain each logic."
     system_prompt += "\nThe response should be in MarkDown format." 
 
@@ -28,7 +23,7 @@ if __name__ == "__main__":
 
     messages = [
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": question}
+        {"role": "user", "content": user_prompt}
     ]
 
     model_mapping = {
